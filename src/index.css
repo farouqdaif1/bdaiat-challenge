@@ -11,11 +11,18 @@ body {
   font-family: "Noto Sans", sans-serif;
   padding: 32px 5% 32px 5%;
 }
-#light{
-    background-color: #fff;
-    color: #000;
+#light {
+  background-color: #fff;
+  color: #000;
 }
-#dark{
-    background-color: #000;
-    color: #fff;
+#dark {
+  background-color: #000;
+  color: #fff;
+}
+.switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 32px;
 }

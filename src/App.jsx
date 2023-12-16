@@ -7,9 +7,6 @@ import Navbar from "./components/NavBar/Navbar";
 export const ThemeContext = createContext(null);
 
 function App() {
-  // fetch('https://dummyjson.com/products')
-  // .then(res => res.json())
-  // .then(console.log);
   const [theme, setTheme] = useState("light");
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
@@ -19,7 +16,7 @@ function App() {
       <Router>
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
           <div id={theme} className="App">
-            <Navbar />
+            <Navbar  />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/cart" element={<Cart />} />
