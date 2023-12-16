@@ -1,7 +1,10 @@
+import Home from "./components/Home/Home"
+import Navbar from "./components/NavBar/Navbar"
 function App() {
   return (
     <>
-      <h1>React App</h1>
+      <Navbar />
+      <Home />
     </>
   )
 }
