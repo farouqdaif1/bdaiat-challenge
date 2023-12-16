@@ -38,6 +38,7 @@ body {
   display: flex;
   list-style: none;
   justify-content: flex-start;
+  align-items: center;
   height: 63px;
 }
 .nav-bar .pages li a {
