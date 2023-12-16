@@ -6,13 +6,19 @@ import { ThemeContext } from "../../App";
 const Navbar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
-    <nav>
-      <ul>
+    <nav className="nav-bar">
+      <ul className="pages">
         <li>
           <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/cart">Cart</Link>
+        </li>
+      </ul>
+      <img className="logo" src="../../../public/Logo.png" alt="logo" />
+      <ul className="buttons">
+        <li>
+          <i className="fa-solid fa-cart-shopping"></i>
         </li>
         <li className="switch">
           <label>
