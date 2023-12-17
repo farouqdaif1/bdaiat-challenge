@@ -11,5 +11,7 @@
     "Price": "السعر",
     "Rating": "التقييم",
     "brand": "الماركة",
-    "CartSummary": "ملخص السلة"
+    "CartSummary": "ملخص السلة",
+    "Arabic": "العربية",
+    "English": "الانجليزية"
  }

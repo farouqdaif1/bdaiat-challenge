@@ -11,5 +11,7 @@
     "Price": "Price",
     "Rating": "Rating",
     "brand": "Brand",
-    "CartSummary": "Cart Summary"
+    "CartSummary": "Cart Summary",
+    "Arabic": "Arabic",
+    "English": "English"
   }

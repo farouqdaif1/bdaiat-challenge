@@ -63,6 +63,7 @@ body {
   display: flex;
   list-style: none;
   justify-content: flex-end;
+  align-items: center;
 }
 .nav-bar .buttons li {
   display: flex;
@@ -123,6 +124,29 @@ body {
   align-items: center;
   width: 5%;
   margin-bottom: 32px;
+}
+
+.language-switcher {
+  display: flex;
+  justify-content: space-around;
+}
+
+.language-button {
+  background-color: #4caf4f;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+}
+
+.language-button:hover {
+  background-color: #1db322;
 }
 .product-list {
   display: flex;
