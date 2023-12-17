@@ -6,7 +6,7 @@ import {
   removeFromCartAction,
 } from "../../../store/actions/cartActions";
 import { useState } from "react";
-
+import { useTranslation } from "react-i18next";
 const Card = ({ product }) => {
   const [quantity, setQuantity] = useState(0);
   const dispatch = useDispatch();
@@ -15,18 +15,24 @@ const Card = ({ product }) => {
     product.title.length > maxTitleLength
       ? product.title.slice(0, maxTitleLength) + "..."
       : product.title;
+  const { t } = useTranslation();
 
   return (
     <div className="card">
       <img src={product.thumbnail} alt={product.title} />
       <div className="card-body">
         <h3 className="product-title">{truncatedTitle}</h3>
-        <p className="product-info">Brand: {product.brand}</p>
+        <p className="product-info">
+          {t("brand")}: {product.brand}
+        </p>
         <div className="product-data">
           <p className="product-info">
-            Rating: {product.rating} <i className="star fa-solid fa-star"></i>
+            {t("Rating")}: {product.rating}{" "}
+            <i className="star fa-solid fa-star"></i>
           </p>
-          <p className="product-info">Stock: {product.stock}</p>
+          <p className="product-info">
+            {t("Stock")}: {product.stock}
+          </p>
         </div>
         <p className="product-price">
           ${product.price}
@@ -48,7 +54,7 @@ const Card = ({ product }) => {
               dispatch(addToCartAction({ product, quantity }));
             }}
           >
-            Add to Cart
+            {t("AddBtn")}
           </button>
           <div className="quantity-area">
             <button

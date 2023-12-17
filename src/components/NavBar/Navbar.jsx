@@ -3,15 +3,18 @@ import ReactSwitch from "react-switch";
 import { useContext } from "react";
 import { ThemeContext } from "../../App";
 import { useSelector } from "react-redux";
-
+import { useTranslation } from 'react-i18next';
+import SwitchLang from "./SwitchLang/SwitchLang";
 const Navbar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const numberOfItems = useSelector((state) => state.cartReducer.totalQuantity);
+  const { t } = useTranslation();
+
   return (
     <nav className="nav-bar">
       <ul className="pages">
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">{t('HomePage')}</Link>
         </li>
       </ul>
       <ul className="buttons">
@@ -30,6 +33,9 @@ const Navbar = () => {
             )}
           </label>
           <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+        </li>
+        <li>
+          <SwitchLang />
         </li>
       </ul>
     </nav>

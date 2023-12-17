@@ -5,7 +5,6 @@ import Home from "./components/Home/Home";
 import Navbar from "./components/NavBar/Navbar";
 import { useDispatch } from "react-redux";
 import { getProducts } from "./store/actions/prouctsActions";
-
 export const ThemeContext = createContext(null);
 
 function App() {
@@ -24,9 +23,9 @@ function App() {
       <Router>
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
           <div id={theme} className="App">
-            <Navbar/>
+            <Navbar />
             <Routes>
-              <Route path="/" element={<Home  />} />
+              <Route path="/" element={<Home />} />
               <Route path="/cart" element={<Cart />} />
             </Routes>
           </div>
