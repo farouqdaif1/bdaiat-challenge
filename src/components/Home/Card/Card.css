@@ -5,6 +5,11 @@
   margin: 16px;
   width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #333333;
+}
+#dark .card {
+  border: 3px solid #1db322;
+  color: #ffffff;
 }
 
 .card img {
@@ -34,6 +39,9 @@
   color: #555;
   margin-right: 15px;
 }
+#dark .product-info {
+  color: #fffdfdbf;
+}
 .star {
   color: goldenrod;
 }
@@ -48,6 +56,7 @@
   font-size: 1.2em;
   font-weight: bold;
 }
+
 .buttons-area {
   display: flex;
   flex-direction: row;
@@ -62,13 +71,16 @@
   width: 30%;
 }
 .quantity-area .min-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   background-color: white;
   border: 1px solid #4caf4f;
+  padding: 0px 10px;
   color: black;
   width: 40px;
   height: 40px;
-  text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
@@ -78,8 +90,16 @@
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
-  margin-right: 8px;
-  margin-left: 8px;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+#dark .quantity-area .min-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #1db322;
+}
+#dark .quantity-area .min-btn:hover {
+  background-color: #1db322;
 }
 .quantity-area button:hover {
   background-color: #1db322;
@@ -92,12 +112,12 @@
   padding: 8px;
 }
 .add-to-cart-btn {
-  background-color: white;
-  color: black;
+  background-color: #1db322;
+  color: #ffffff;
   border: none;
   padding: 8px 16px;
   text-align: center;
-  border: 1px solid #4caf4f;
+  border: 1px solid #1db322;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
@@ -108,13 +128,17 @@
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
+  font-weight: bold;
 }
 .add-to-cart-btn:hover {
-  background-color: #1db322;
+  background-color: #118f15;
   color: white;
 }
 .original-price {
   text-decoration: line-through;
   color: #55555582;
   font-size: 12px;
+}
+#dark .original-price {
+  color: #fffdfdbf;
 }

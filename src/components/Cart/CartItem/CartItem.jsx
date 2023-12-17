@@ -10,10 +10,8 @@ import { useTranslation } from "react-i18next";
 
 const CartItem = ({ product }) => {
   const dispatch = useDispatch();
-  console.log(product.quantity);
   let quantity = product.quantity;
   const { t } = useTranslation();
-
   return (
     <>
       <div className="cart-item" key={product.id}>
