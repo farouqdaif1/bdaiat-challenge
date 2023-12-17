@@ -1,4 +1,4 @@
-import { addToCart, removeFromCart, emptyCart } from '../reducers/cartSlice';
+import { addToCart, removeFromCart, emptyCart, deleteFromCart } from '../reducers/cartSlice';
 
 
 export const addToCartAction = (product) => (dispatch) => {
@@ -8,6 +8,10 @@ export const addToCartAction = (product) => (dispatch) => {
 
 export const removeFromCartAction = (id) => (dispatch) => {
     dispatch(removeFromCart(id));
+}
+
+export const deleteFromCartAction = (id) => (dispatch) => {
+    dispatch(deleteFromCart(id));
 }
 
 export const emptyCartAction = () => (dispatch) => {

@@ -61,7 +61,7 @@
   align-items: center;
   width: 30%;
 }
-.quantity-area button {
+.quantity-area .min-btn {
   text-align: center;
   background-color: white;
   border: 1px solid #4caf4f;
@@ -78,6 +78,8 @@
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
+  margin-right: 8px;
+  margin-left: 8px;
 }
 .quantity-area button:hover {
   background-color: #1db322;

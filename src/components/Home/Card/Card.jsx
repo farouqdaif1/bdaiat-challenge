@@ -6,15 +6,16 @@ import {
   removeFromCartAction,
 } from "../../../store/actions/cartActions";
 import { useState } from "react";
+
 const Card = ({ product }) => {
   const [quantity, setQuantity] = useState(0);
   const dispatch = useDispatch();
   const maxTitleLength = 28;
-  // Truncate the title if it exceeds the maximum length
   const truncatedTitle =
     product.title.length > maxTitleLength
       ? product.title.slice(0, maxTitleLength) + "..."
       : product.title;
+
   return (
     <div className="card">
       <img src={product.thumbnail} alt={product.title} />
@@ -51,6 +52,7 @@ const Card = ({ product }) => {
           </button>
           <div className="quantity-area">
             <button
+              className="min-btn"
               onClick={() => {
                 setQuantity(quantity - 1);
                 dispatch(removeFromCartAction({ product, quantity }));
@@ -58,8 +60,13 @@ const Card = ({ product }) => {
             >
               -
             </button>
-            <p>{`${quantity}`}</p>
+            {localStorage.getItem(`${product.title}`) ? (
+              <span>{localStorage.getItem(`${product.title}`)}</span>
+            ) : (
+              <span>{quantity}</span>
+            )}
             <button
+              className="min-btn"
               onClick={() => {
                 setQuantity(quantity + 1);
                 dispatch(addToCartAction({ product, quantity }));

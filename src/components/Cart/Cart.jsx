@@ -1,10 +1,12 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 // import { useState } from "react";
 import CartItem from "./CartItem/CartItem";
+import { emptyCartAction } from "../../store/actions/cartActions";
 
 const Cart = () => {
   const totalPrice = useSelector((state) => state.cartReducer.totalPrice);
   const products = useSelector((state) => state.cartReducer.cart);
+  const dispatch = useDispatch();
 
   return (
     <div>
@@ -21,17 +23,21 @@ const Cart = () => {
           </div>
           <div className="cart-summary-details">
             <div className="cart-summary-detail">
-              <p>Subtotal</p>
+              <p>Total</p>
               <p>${totalPrice}</p>
             </div>
             <div className="cart-summary-detail">
               <p>Shipping</p>
               <p>Free</p>
             </div>
-            <div className="cart-summary-detail">
-              <p>Tax</p>
-              {/* <p>${(totalPrice * 0. 1).toFixed(2)}</p> */}
-            </div>
+            <button
+              className="clear-cart"
+              onClick={() => {
+                dispatch(emptyCartAction());
+              }}
+            >
+              clear the Cart
+            </button>
           </div>
         </div>
       </div>

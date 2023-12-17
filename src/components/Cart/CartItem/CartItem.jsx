@@ -1,28 +1,29 @@
-// import React from "react";
 import { useDispatch } from "react-redux";
-// import { useState } from "react";
 import PropTypes from "prop-types";
 
 import {
   addToCartAction,
   removeFromCartAction,
+  deleteFromCartAction,
 } from "../../../store/actions/cartActions";
 const CartItem = ({ product }) => {
   const dispatch = useDispatch();
+  console.log(product.quantity);
   let quantity = product.quantity;
   return (
-    <div>
+    <>
       <div className="cart-item" key={product.id}>
         <div className="cart-item-image">
           <img src={product.images[0]} alt={product.brand} />
         </div>
         <div className="cart-item-details">
           <p className="cart-item-brand">{product.brand}</p>
+          <p className="cart-item-title">{product.title}</p>
           <p className="cart-item-description">{product.description}</p>
           <p className="cart-item-price">
             ${product.price}
             &nbsp;&nbsp;
-            <span className="original-price">
+            <span className="original-price-cart">
               {(product.price / (1 - product.discountPercentage / 100)).toFixed(
                 2
               )}
@@ -32,30 +33,37 @@ const CartItem = ({ product }) => {
             </span>{" "}
           </p>
           <div className="buttons-area">
-            <div className="quantity-area">
+            <div className="quantity-area-cart">
               <button
+                className="min-btn"
                 onClick={() => {
-                  quantity = product.quantity - 1;
-
                   dispatch(removeFromCartAction({ product, quantity }));
                 }}
               >
                 -
               </button>
-              <p>{`${product.quantity + 1}`}</p>
+              <p>{`${quantity}`}</p>
               <button
+                className="min-btn"
                 onClick={() => {
-                  quantity = product.quantity + 1;
-                  dispatch(addToCartAction({ product }));
+                  dispatch(addToCartAction({ product, quantity }));
                 }}
               >
                 +
+              </button>
+              <button
+                className="delete-btn"
+                onClick={() => {
+                  dispatch(deleteFromCartAction({ product }));
+                }}
+              >
+                Delete
               </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
