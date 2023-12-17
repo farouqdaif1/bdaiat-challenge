@@ -170,7 +170,7 @@ body {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 .cart-container .cart-products .cart-item .cart-item-image {
-  width: 50%;
+  width: 40%;
   height: 300px;
   object-fit: cover;
   margin-right: 32px;
@@ -179,7 +179,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  margin-right: 32px;
 }
 .cart-container .cart-products .cart-item .cart-item-details {
   display: flex;
