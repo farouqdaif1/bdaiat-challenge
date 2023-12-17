@@ -1,5 +1,5 @@
 {
-    "HomePage": "الرئيسية" ,
+    "HomePage": "منتجاتنا" ,
     "AddBtn": "اضافة الي السلة",
     "DeleteBtn": "حذف من السلة",
     "Shipping": "الشحن",
@@ -13,5 +13,8 @@
     "brand": "الماركة",
     "CartSummary": "ملخص السلة",
     "Arabic": "العربية",
-    "English": "الانجليزية"
+    "English": "الانجليزية",
+    "setting": "الاعدادات",
+    "language": "اللغة",
+    "Theme": "المظهر"
  }
