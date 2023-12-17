@@ -22,14 +22,25 @@
   margin: 0;
 }
 
-.product-description {
-  margin: 8px 0;
+.product-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
-
 .product-info {
   margin: 4px 0;
   font-size: 0.9em;
   color: #555;
+  margin-right: 15px;
+}
+.star {
+  color: goldenrod;
+}
+.sale {
+  font-size: 12px;
+  font-weight: bold;
+  color: #4caf50;
 }
 
 .product-price {
@@ -37,17 +48,73 @@
   font-size: 1.2em;
   font-weight: bold;
 }
-
-.add-to-cart-btn {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 8px 16px;
+.buttons-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.quantity-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+.quantity-area .min-btn {
+  text-align: center;
+  background-color: white;
+  border: 1px solid #4caf4f;
+  color: black;
+  width: 40px;
+  height: 40px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+.quantity-area button:hover {
+  background-color: #1db322;
+  color: white;
+}
+.quantity-area p {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 8px;
+}
+.add-to-cart-btn {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  border: 1px solid #4caf4f;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
   margin: 8px 0;
   cursor: pointer;
   border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.add-to-cart-btn:hover {
+  background-color: #1db322;
+  color: white;
+}
+.original-price {
+  text-decoration: line-through;
+  color: #55555582;
+  font-size: 12px;
 }

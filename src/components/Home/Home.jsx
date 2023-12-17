@@ -3,8 +3,9 @@ import Card from "./Card/Card";
 
 const Home = () => {
   const data = useSelector((state) => state.productsReducer.products);
+
   return (
-    <div>
+    <div className="product-list">
       {data.map((ele) => (
         <Card key={ele.id} product={ele} />
       ))}
