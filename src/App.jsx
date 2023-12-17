@@ -13,6 +13,7 @@ function App() {
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getProducts());
@@ -23,9 +24,9 @@ function App() {
       <Router>
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
           <div id={theme} className="App">
-            <Navbar />
+            <Navbar/>
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Home  />} />
               <Route path="/cart" element={<Cart />} />
             </Routes>
           </div>
