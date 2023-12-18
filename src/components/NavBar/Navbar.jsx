@@ -51,7 +51,11 @@ const Navbar = () => {
         <Link to="/cart">
           <li className="shopping">
             <i className="fa-solid fa-cart-shopping"></i>
-            {<span className="cart-items">{numberOfItems}</span>}
+            {
+              <span className="cart-items">
+                {numberOfItems < 0 ? 0 : numberOfItems}
+              </span>
+            }
           </li>
         </Link>
       </ul>
