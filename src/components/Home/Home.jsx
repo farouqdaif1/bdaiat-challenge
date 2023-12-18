@@ -2,11 +2,10 @@ import { useSelector } from "react-redux";
 import Card from "./Card/Card";
 
 const Home = () => {
-  const data = useSelector((state) => state.productsReducer.products);
-
+  const products = useSelector((state) => state.cartReducer.products);
   return (
     <div className="product-list">
-      {data.map((ele) => (
+      {products.map((ele) => (
         <Card key={ele.id} product={ele} />
       ))}
     </div>

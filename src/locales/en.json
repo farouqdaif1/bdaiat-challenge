@@ -1,5 +1,5 @@
 {
-    "HomePage": "Home",
+    "HomePage": "Products",
     "AddBtn": "Add to cart",
     "DeleteBtn": "Delete",
     "Shipping": "Shipping",
@@ -13,5 +13,8 @@
     "brand": "Brand",
     "CartSummary": "Cart Summary",
     "Arabic": "Arabic",
-    "English": "English"
+    "English": "English",
+    "setting": "Setting",
+    "language" : "Language",
+    "Theme" : "Theme"
   }
