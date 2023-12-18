@@ -1,4 +1,4 @@
-import { addToCart, removeFromCart, emptyCart, deleteFromCart } from '../reducers/cartSlice';
+import { addToCart, removeFromCart, emptyCart, deleteFromCart,setProductsForDisplay } from '../reducers/cartSlice';
 
 
 export const addToCartAction = (product) => (dispatch) => {
@@ -16,4 +16,7 @@ export const deleteFromCartAction = (id) => (dispatch) => {
 
 export const emptyCartAction = () => (dispatch) => {
     dispatch(emptyCart());
+}
+export const setProductsForDisplayAction = (products) => (dispatch) => { 
+    dispatch(setProductsForDisplay(products));
 }

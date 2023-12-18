@@ -7,6 +7,7 @@ import {
 } from "../../../store/actions/cartActions";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+
 const Card = ({ product }) => {
   const [quantity, setQuantity] = useState(0);
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ const Card = ({ product }) => {
       ? product.title.slice(0, maxTitleLength) + "..."
       : product.title;
   const { t } = useTranslation();
-
+  console.log(product.quantity);
   return (
     <div className="card">
       <img src={product.thumbnail} alt={product.title} />
@@ -66,11 +67,7 @@ const Card = ({ product }) => {
             >
               -
             </button>
-            {localStorage.getItem(`${product.title}`) ? (
-              <span>{localStorage.getItem(`${product.title}`)}</span>
-            ) : (
-              <span>{quantity}</span>
-            )}
+            <span>{product.quantity > 0 ? product.quantity : 0}</span>
             <button
               className="min-btn"
               onClick={() => {
