@@ -8,7 +8,6 @@ const Navbar = () => {
   const toggleNav = () => {
     document.getElementById("pages-mob").classList.toggle("disappear");
   };
-
   return (
     <nav className="nav-bar">
       <ul className="pages">

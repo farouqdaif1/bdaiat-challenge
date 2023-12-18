@@ -8,7 +8,6 @@ const Cart = () => {
   const products = useSelector((state) => state.cartReducer.cart);
   const dispatch = useDispatch();
   const { t } = useTranslation();
-
   return (
     <div>
       <h1 className="cart-header">{t("Cart")}</h1>
