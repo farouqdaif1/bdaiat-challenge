@@ -36,21 +36,16 @@ const cartSlice = createSlice({
             const id = action.payload.product.id;
             const quantity = action.payload.quantity - 1;
             const existingProduct = state.cart.find((item) => item.id === id);
-            if (action.payload.quantity > 0) {
-                if (existingProduct.quantity === 1) {
-                    existingProduct.quantity = quantity;
-                    state.cart = state.cart.filter((item) => item.id !== id);
-                    state.products[action.payload.product.id - 1] = existingProduct;
-                } else {
-                    existingProduct.quantity = quantity;
-                    state.products[action.payload.product.id - 1] = existingProduct;
-                }
-                state.totalQuantity--;
-                state.totalPrice -= existingProduct.price;
-
+            if (existingProduct.quantity === 1) {
+                existingProduct.quantity = quantity;
+                state.cart = state.cart.filter((item) => item.id !== id);
+                state.products[action.payload.product.id - 1] = existingProduct;
             } else {
-                window.alert("No such product in cart");
+                existingProduct.quantity = quantity;
+                state.products[action.payload.product.id - 1] = existingProduct;
             }
+            state.totalQuantity--;
+            state.totalPrice -= existingProduct.price;
         },
         deleteFromCart: (state, action) => {
             const id = action.payload.product.id;
@@ -58,10 +53,8 @@ const cartSlice = createSlice({
             state.totalQuantity -= existingProduct.quantity;
             state.totalPrice -= existingProduct.price * existingProduct.quantity;
             state.cart = state.cart.filter((item) => item.id !== id);
-            console.log(existingProduct)
             existingProduct.quantity = 0;
             state.products[action.payload.product.id - 1] = existingProduct;
-
         }
         ,
         emptyCart: (state) => {
