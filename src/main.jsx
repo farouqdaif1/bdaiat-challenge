@@ -19,6 +19,7 @@ i18n.use(initReactI18next).init({
     escapeValue: false, // React already does escaping
   },
 });
+localStorage.clear();
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>

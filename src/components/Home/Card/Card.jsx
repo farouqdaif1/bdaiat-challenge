@@ -5,11 +5,9 @@ import {
   addToCartAction,
   removeFromCartAction,
 } from "../../../store/actions/cartActions";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const Card = ({ product }) => {
-  const [quantity, setQuantity] = useState(0);
   const dispatch = useDispatch();
   const maxTitleLength = 28;
   const truncatedTitle =
@@ -17,6 +15,8 @@ const Card = ({ product }) => {
       ? product.title.slice(0, maxTitleLength) + "..."
       : product.title;
   const { t } = useTranslation();
+  let quantity = product.quantity || 0;
+
   return (
     <div className="card">
       <img src={product.thumbnail} alt={product.title} />
@@ -50,7 +50,6 @@ const Card = ({ product }) => {
           <button
             className="add-to-cart-btn"
             onClick={() => {
-              setQuantity(quantity + 1);
               dispatch(addToCartAction({ product, quantity }));
             }}
           >
@@ -60,10 +59,8 @@ const Card = ({ product }) => {
             <button
               className="min-btn"
               onClick={() => {
-                if (quantity > 0) {
-                  setQuantity(quantity - 1);
+                if (product.quantity > 0) {
                   dispatch(removeFromCartAction({ product, quantity }));
-
                 }
               }}
             >
@@ -73,7 +70,6 @@ const Card = ({ product }) => {
             <button
               className="min-btn"
               onClick={() => {
-                setQuantity(quantity + 1);
                 dispatch(addToCartAction({ product, quantity }));
               }}
             >
