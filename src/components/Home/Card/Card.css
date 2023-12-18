@@ -1,0 +1,144 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 16px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #333333;
+}
+#dark .card {
+  border: 3px solid #1db322;
+  color: #ffffff;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.product-title {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.product-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.product-info {
+  margin: 4px 0;
+  font-size: 0.9em;
+  color: #555;
+  margin-right: 15px;
+}
+#dark .product-info {
+  color: #fffdfdbf;
+}
+.star {
+  color: goldenrod;
+}
+.sale {
+  font-size: 12px;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.product-price {
+  margin: 8px 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.buttons-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.quantity-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+.quantity-area .min-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #4caf4f;
+  padding: 0px 10px;
+  color: black;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+#dark .quantity-area .min-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #1db322;
+}
+#dark .quantity-area .min-btn:hover {
+  background-color: #1db322;
+}
+.quantity-area button:hover {
+  background-color: #1db322;
+  color: white;
+}
+.quantity-area p {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 8px;
+}
+.add-to-cart-btn {
+  background-color: #1db322;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  border: 1px solid #1db322;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  font-weight: bold;
+}
+.add-to-cart-btn:hover {
+  background-color: #118f15;
+  color: white;
+}
+.original-price {
+  text-decoration: line-through;
+  color: #55555582;
+  font-size: 12px;
+}
+#dark .original-price {
+  color: #fffdfdbf;
+}

@@ -1,0 +1,20 @@
+{
+    "HomePage": "Products",
+    "AddBtn": "Add to cart",
+    "DeleteBtn": "Delete",
+    "Shipping": "Shipping",
+    "clearTheCart": "Clear the cart",
+    "Total": "Total",
+    "FreeShipping": "Free Shipping",
+    "Cart": "cart",
+    "Stock": "Stock",
+    "Price": "Price",
+    "Rating": "Rating",
+    "brand": "Brand",
+    "CartSummary": "Cart Summary",
+    "Arabic": "Arabic",
+    "English": "English",
+    "setting": "Setting",
+    "language" : "Language",
+    "Theme" : "Theme"
+  }
