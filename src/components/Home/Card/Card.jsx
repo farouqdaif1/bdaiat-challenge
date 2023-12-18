@@ -60,8 +60,11 @@ const Card = ({ product }) => {
             <button
               className="min-btn"
               onClick={() => {
-                setQuantity(quantity - 1);
-                dispatch(removeFromCartAction({ product, quantity }));
+                if (quantity > 0) {
+                  setQuantity(quantity - 1);
+                  dispatch(removeFromCartAction({ product, quantity }));
+
+                }
               }}
             >
               -

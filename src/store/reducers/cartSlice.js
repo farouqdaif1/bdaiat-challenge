@@ -25,7 +25,6 @@ const cartSlice = createSlice({
                     ...product,
                     quantity: quantity,
                 };
-
             } else {
                 existingProduct.quantity = quantity;
                 state.products[product.id - 1] = existingProduct;
@@ -35,22 +34,23 @@ const cartSlice = createSlice({
         },
         removeFromCart: (state, action) => {
             const id = action.payload.product.id;
-            let quantity = action.payload.quantity - 1;
-            if (quantity < 0) {
-                console.log("error");
-            } else {
-                const existingProduct = state.cart.find((item) => item.id === id);
-                if (existingProduct.quantity === 0) {
+            const quantity = action.payload.quantity - 1;
+            const existingProduct = state.cart.find((item) => item.id === id);
+            if (action.payload.quantity > 0) {
+                if (existingProduct.quantity === 1) {
+                    existingProduct.quantity = quantity;
                     state.cart = state.cart.filter((item) => item.id !== id);
-                    state.products[action.payload.product.id - 1] = existingProduct
+                    state.products[action.payload.product.id - 1] = existingProduct;
                 } else {
                     existingProduct.quantity = quantity;
                     state.products[action.payload.product.id - 1] = existingProduct;
                 }
                 state.totalQuantity--;
                 state.totalPrice -= existingProduct.price;
-            }
 
+            } else {
+                window.alert("No such product in cart");
+            }
         },
         deleteFromCart: (state, action) => {
             const id = action.payload.product.id;
