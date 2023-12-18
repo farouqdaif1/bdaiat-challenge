@@ -17,7 +17,6 @@ const Card = ({ product }) => {
       ? product.title.slice(0, maxTitleLength) + "..."
       : product.title;
   const { t } = useTranslation();
-  console.log(product.quantity);
   return (
     <div className="card">
       <img src={product.thumbnail} alt={product.title} />

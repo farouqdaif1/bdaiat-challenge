@@ -5,11 +5,43 @@ const Navbar = () => {
   const numberOfItems = useSelector((state) => state.cartReducer.totalQuantity);
   const { t } = useTranslation();
 
+  const toggleNav = () => {
+    document.getElementById("pages-mob").classList.toggle("disappear");
+  };
+
   return (
     <nav className="nav-bar">
       <ul className="pages">
         <li>
           <Link to="/">{t("HomePage")}</Link>
+        </li>
+        <li>
+          <Link to="/setting">{t("setting")}</Link>
+        </li>
+      </ul>
+      <div className="bars">
+        <i
+          className="fa-solid fa-bars"
+          onClick={() => {
+            toggleNav();
+          }}
+        ></i>
+      </div>
+      <ul
+        onClick={() => {
+          toggleNav();
+        }}
+        id="pages-mob"
+        className="pages-mob disappear"
+      >
+        <li className="mob-close">
+          <i id="mob-close" className="fa-solid fa-x "></i>
+        </li>
+        <li>
+          <Link to="/">{t("HomePage")}</Link>
+        </li>
+        <li>
+          <Link to="/cart">{t("Cart")}</Link>
         </li>
         <li>
           <Link to="/setting">{t("setting")}</Link>

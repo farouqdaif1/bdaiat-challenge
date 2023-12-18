@@ -34,6 +34,9 @@ body {
   margin-bottom: 3px;
   height: 56px;
 }
+.nav-bar .active {
+  display: none;
+}
 #dark .nav-bar {
   color: white;
 }
@@ -45,6 +48,10 @@ body {
   align-items: center;
   height: 63px;
 }
+.nav-bar .bars {
+  display: none;
+}
+
 .nav-bar .pages li a {
   display: flex;
   padding: 20px 12px;
@@ -451,13 +458,93 @@ body {
   height: 100vh;
 }
 @media only screen and (max-width: 767px) {
+  .nav-bar {
+    padding: 0px 32px;
+    /* justify-content: space-between; */
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    /* position: relative; */
+  }
   .nav-bar .pages {
     display: none;
   }
-  .toggle-icon {
-    display: block;
-  }
+
   .nav-bar .buttons {
-    display: none;
+    width: 50%;
+    justify-content: flex-start;
   }
+  .nav-bar .buttons li {
+    margin-left: 0;
+  }
+
+  .nav-bar .pages .bars {
+    width: 50%;
+    justify-content: flex-start;
+  }
+  /* .nav-bar .active {
+    display: block;
+  } */
+  .nav-bar .bars {
+    display: block;
+    font-size: 30px;
+  }
+  .nav-bar .pages-mob {
+    z-index: 10;
+    background-color: #1db322e8;
+    padding: 32px 32px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+    color: #fff;
+  }
+
+  .nav-bar .pages-mob li {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    border-bottom: 2px solid #fff;
+  }
+  .nav-bar .pages-mob .mob-close {
+    align-self: flex-end;
+    border: none;
+  }
+  .nav-bar .pages-mob li a {
+    text-decoration: none;
+    color: #dddbdc;
+    font-weight: bold;
+  }
+  .setting .theme .switch {
+    width: 25%;
+  }
+  .cart-container .cart-products .cart-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cart-container .cart-products .cart-item .cart-item-image {
+    width: 100%;
+    height: 200px;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  .cart-container .cart-products .cart-item .cart-item-details {
+    width: 100%;
+  }
+  .buttons-area .quantity-area-cart .delete-btn {
+    padding: 8px 8px;
+  }
+
+  .cart-summary {
+    width: 100%;
+  }
+}
+.disappear {
+  display: none !important;
 }
