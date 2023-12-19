@@ -9,6 +9,7 @@ const Navbar = () => {
   const toggleNav = () => {
     document.getElementById("pages-mob").classList.toggle("disappear");
     body.classList.toggle("no-scroll");
+    document.querySelector(".fa-bars").classList.toggle("disappear");
   };
   return (
     <nav className="nav-bar">
