@@ -452,7 +452,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /* align-items: flex-start; */
   width: 100%;
   margin-bottom: 32px;
   height: 100vh;
@@ -460,10 +459,8 @@ body {
 @media only screen and (max-width: 767px) {
   .nav-bar {
     padding: 0px 32px;
-    /* justify-content: space-between; */
-    justify-content: space-between;
+   justify-content: space-between;
     flex-direction: row-reverse;
-    /* position: relative; */
   }
   .nav-bar .pages {
     display: none;
@@ -481,9 +478,7 @@ body {
     width: 50%;
     justify-content: flex-start;
   }
-  /* .nav-bar .active {
-    display: block;
-  } */
+
   .nav-bar .bars {
     display: block;
     font-size: 30px;
@@ -547,4 +542,7 @@ body {
 }
 .disappear {
   display: none !important;
+}
+.no-scroll {
+  overflow: hidden;
 }

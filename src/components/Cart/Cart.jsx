@@ -1,5 +1,4 @@
 import { useSelector, useDispatch } from "react-redux";
-// import { useState } from "react";
 import CartItem from "./CartItem/CartItem";
 import { emptyCartAction } from "../../store/actions/cartActions";
 import { useTranslation } from "react-i18next";

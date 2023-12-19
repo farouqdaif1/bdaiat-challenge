@@ -4,9 +4,11 @@ import { useTranslation } from "react-i18next";
 const Navbar = () => {
   const numberOfItems = useSelector((state) => state.cartReducer.totalQuantity);
   const { t } = useTranslation();
+  const body = document.body;
 
   const toggleNav = () => {
     document.getElementById("pages-mob").classList.toggle("disappear");
+    body.classList.toggle("no-scroll");
   };
   return (
     <nav className="nav-bar">

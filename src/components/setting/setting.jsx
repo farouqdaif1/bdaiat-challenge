@@ -14,7 +14,6 @@ const Setting = () => {
         <h2>{t("language")}</h2>
         <SwitchLang />
       </div>
-      {/* <hr /> */}
       <div className="theme">
         <h2>{t("Theme")}</h2>
         <div className="switch">
