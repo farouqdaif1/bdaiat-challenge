@@ -67,7 +67,7 @@ A toggle button has been added to show the cart icon and language settings, part
 1. Clone the repository:
 
    ```bash
-      git clone [repository_url]
+      git clone [https://github.com/farouqdaif1/bdaiat-challenge.git]
 2. Install dependencies:
 
        npm install
